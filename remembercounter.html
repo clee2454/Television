@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember counter</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let number = 0;
+            const textH1=document.getElementById("number");
+            textH1.innerHTML=number;
+
+            document.querySelectorAll('button').forEach(button =>{
+                button.addEventListener('click',function(){
+                    if (this.dataset.button === 'increase'){
+                        textH1.innerHTML=number+=1;
+                        // console.log(number);
+                        
+                    }
+                    else {
+                        textH1.innerHTML=number-=1;
+                    }
+            })
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <div class="container-dmg">
+
+        <h1 id="number"></h1>
+    </div>
+    <button data-button="decrease" >-1</button>
+    <button data-button="increase" >+1</button>
+        <script></script>
+</body>
+</html>

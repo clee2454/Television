@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let number = 0;
+            const textH1=document.getElementById("num");
+            const tvcolor = document.getElementById('tv')
+            console.log(tvcolor);
+            textH1.innerHTML=number;
+
+        
+            document.querySelectorAll('button').forEach(button =>{
+                
+                button.addEventListener('click',function(){
+                    if (this.dataset.button === 'increase'){
+                        if(number>=9){
+                            number=0;
+                        }
+                        textH1.innerHTML=number+=1;
+                        console.log(number);
+                        // let num = number;
+                        
+                    }
+                    else if(this.dataset.button==='decrease'){
+                        if(number<=1){
+                            number=10;
+                        }
+                        textH1.innerHTML=number-=1;
+                        console.log(number);
+
+                    }
+                    else if(this.dataset.button==='1'){
+                        textH1.innerHTML=number=1
+                    }
+                    else if(this.dataset.button==='2'){
+                        textH1.innerHTML=number=2;
+                    }
+                    else if(this.dataset.button==='3'){
+                        textH1.innerHTML=number=3;
+                    }
+                    else if(this.dataset.button==='4'){
+                        // console.log(number);
+                        textH1.innerHTML=number=4;
+                    }
+                    else if(this.dataset.button==='5'){
+                        textH1.innerHTML=number=5;
+                    }
+                    else if(this.dataset.button==='6'){
+                        textH1.innerHTML=number=6;
+                    }
+                    else if(this.dataset.button==='7'){
+                        textH1.innerHTML=number=7;
+                    }
+                    else if(this.dataset.button==='8'){
+                        textH1.innerHTML=number=8;
+                    }
+                    else if(this.dataset.button==='9'){
+                        textH1.innerHTML=number=9;
+                    }
+                    else{
+                        tvcolor.classList.toggle('on'), textH1.style.color="rgb(32,31,31)", textH1.innerHTML=number=1;
+                    }
+                    
+                    
+                    
+                })
+                
+            })
+            
+            
+        })
+    </script>
+</head>
+<body>
+    <!-- <div class="tv">
+    </div> -->
+    <div class="tvstuff" id="tv"></div>
+        
+        <div class="edit">
+            <div class="ans">
+                <h1 id="num" style="position: absolute; opacity: 30%; color: rgb(32, 31,31); " > 
+                </h1>
+            </div>
+        </div>
+    <div class="buttonfam">
+        <div class="remotetop">
+            <button id="off" style="background-color: red; color: white; " ><i class='bx bx-power-off' style="font-size: 25pt;" ></i></button>
+            <div class="spacer"></div>
+            <button >Tv</button>
+        </div>
+
+        <div class="channel">
+            <button data-button="1" >1</button>
+            <button data-button="2">2</button>
+            <button data-button="3">3</button>
+            <button data-button="4">4</button>
+            <button data-button="5">5</button>
+            <button data-button="6">6</button>
+            <button data-button="7">7</button>
+            <button data-button="8">8</button>
+            <button data-button="9">9</button>
+            
+        </div>
+        <div class="remotebot">
+            <div class="left">
+               
+                <button class="before" data-button="decrease" style=" color: white; background-color: rgb(0, 0, 0);" ><</button>
+            </div>
+            <div class="mid">
+                <div class="midbut">FAV </div>
+                <div class="midbut">I/II</div>
+                <div class="midbut">MUTE <i class='bx bxs-volume-mute' style="font-size: 8pt;" ></i></div>
+            </div>
+           <div class="right">
+            <button class="next" data-button="increase" style="background-color: rgb(0, 0, 0);color: white;" > >
+           </div>
+
+           
+        </div>
+        <div class="bot">
+            <div style="background-color: black; width: 35px; height: 20px;" ><i class='bx bxs-chevrons-left' ></i></div>
+            <div style="background-color: black;width: 35px; height: 20px;" ><i class='bx bx-play' ></i></div>
+            <div style="background-color: black;width: 35px; height: 20px;" ><i class='bx bx-pause' ></i></div>
+            <div style="background-color: black;width: 35px; height: 20px;" ><i class='bx bxs-chevrons-right' ></i></div>
+        </div>
+
+        <div class="last">
+            <div style="background-color: red; width: 35px; height: 20px; line-height: 10px; " >.</div>
+            <div style="background-color: green;width: 35px; height: 20px; line-height: 10px;" >..</div>
+            <div style="background-color: chocolate;width: 35px; height: 20px; line-height: 10px; " >...</div>
+            <div style="background-color: cornflowerblue;width: 35px; height: 20px; line-height: 15px;" >::</div>
+        </div>
+        
+    </div>
+    <script>
+        // off=document.getElementById('off')
+        
+    </script>
+    
+
+</body>
+
+</html>
